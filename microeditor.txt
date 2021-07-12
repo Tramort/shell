@@ -1,0 +1,16 @@
+# Works with byobu 
+## Fix sellect with shift
+````
+$ micro ~/.byobu/keybindings.tmux
+# add, will brake panes witching but I rarely use it
+unbind-key -n S-UP
+unbind-key -n S-DOWN
+unbind-key -n S-LEFT
+unbind-key -n S-RIGHT
+
+# Passthrough Shift Keys Through Byobu
+$ micro ~/.byobu/.tmux.conf 
+# add
+setw -g xterm-keys on
+setw -g default-terminal "xterm-256color"
+```
